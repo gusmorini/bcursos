@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800');
+
+*{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+body{
+	padding-top:70px; 
+	overflow-x: hidden;
+}
+
+main{
+	min-height: 500px;
+	padding-bottom: 40px;
+}
+
+h1.titulo{
+	font-weight: 800;
+	color: #00a3d9;
+	margin: 25px;
+	font-size: 3em;
+}
+
+footer{
+	color:#fff;
+	padding: 20px 0;
+	font-size: 1.3em;
+	overflow: hidden;
+}
+
+footer i{
+	font-size: 4em;
+	margin: 10px;
+}
+
+footer .fab{
+	color: #fff;
+	font-size: 2em;
+}
+
+footer .direitos{
+	margin-top: 10px;
+	font-size: 1.3em;
+	font-weight: 400;
+}
+
+hr{
+	border: 1px dashed #fff;
+}
+
+.navbar-light{
+	box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+	background: white !important;
+}
+
+.dropdown:hover>.dropdown-menu{
+	display: block;
+}
+
+.dropdown-menu{
+	margin-top: -2px; 
+	border-top: 5px solid #000;
+}
+
+.carousel-item img{
+	opacity: 0.5;
+}
+
+.carousel-caption{
+	background: rgba(0,0,0,0.5);
+	color:#fff;
+}
+
+.card .card-title, .card p{
+	height: 70px;
+}
+
+.card{
+	margin-bottom: 10px;
+	box-shadow: 2px 2px 20px rgba(0,0,0,0.4);
+	transition: all 0.5s;
+}
+
+.card:hover{
+	box-shadow: 2px 2px 20px rgba(0,0,0,0.8);
+}
+
+.form{
+	width: 100%;
+	margin: auto;
+	background: none;
+}
+
+.form input, .form textarea{
+	border: 1px solid #ccc;
+	padding: 10px;
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+
+.form label{
+	font-weight: 700;
+	font-size: 1.5em;
+	color: #00a3d9;
+}
+
+.form button{
+	background: #00a3d9;
+	font-size: 1.5em;
+}
+
+#depoimentos{
+	background: url(../imagens/depoimento.jpg) fixed;
+	background-size: cover;
+	padding: 50px 0;
+}
+
+#depoimentos p{
+	font-size: 1.5em;
+	color: #fff;
+	margin: 20px;
+}
+
+#depoimentos p i{
+	font-size: 1.2em;
+}
+
+#depoimentos img{
+	border: 5px solid #fff;
+	width: 250px;
+}
+
+#news{
+	padding:50px 0;
+}

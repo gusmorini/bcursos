@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bcursos Pagina Inicial</title>
+
+	<link rel="shortcut icon" href="imagens/icon.png">
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">	
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			new WOW().init();
+
+			$.get('home.html', function(data){
+				$('#conteudo').html(data);
+			});
+
+			$('a').click(function(){
+				var url = $(this).attr('href').split('#');
+				var link = url[1]+'.html';
+				$.get(link, function(data){
+					$('#conteudo').html(data);
+				});
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+
+	<header>
+		<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+			<div class="container">
+				<a href="#home" title="página inicial" class="navbar-brand">
+					<img src="imagens/logo.png" alt="Bcursos">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="menu">
+		    		<ul class="navbar-nav ml-auto">
+		    			<li class="nav-item">
+		    				<a href="#home" title="Página Inicial" class="nav-link">Home</a>
+		    			</li>
+		    			<li class="nav-item">
+		    				<a href="#empresa" title="Quem Somos" class="nav-link">Quem Somos</a>
+		    			</li>
+		    			<li class="nav-item dropdown">
+					        <a class="nav-link dropdown-toggle" href="#" id="cursos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					          Cursos
+					        </a>
+					        <div class="dropdown-menu" aria-labelledby="cursos">
+					          <a class="dropdown-item" href="#culinaria">Culinária</a>
+					          <a class="dropdown-item" href="#informatica">Informática</a>
+					        </div><!-- dropdown-menu -->
+					    </li>
+					    <li class="nav-item">
+					    	<a href="#contato" title="Contato" class="nav-link">Contato</a>
+					    </li>
+		    		</ul>
+		    	</div><!-- collapse -->
+
+			</div>
+		</nav> <!-- nav menu -->
+	</header><!-- header -->
+
+	<div id="banner" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="imagens/banner1.jpg" alt="Cursos" title="Cursos">
+					<div class="carousel-caption d-none d-md-block">
+						<h2>Cursos de Tecnologia da Informação</h2>
+						<p>
+							<a href="#empresa" class="btn btn-warning btn-lg"><i class="fas fa-search"></i> Ver cursos</a>
+						</p>
+					</div><!-- caption -->
+				</div><!-- carousel-item -->
+			
+				<div class="carousel-item">
+					<img class="d-block w-100" src="imagens/banner2.jpg" alt="Cursos" title="Cursos">
+					<div class="carousel-caption d-none d-md-block">
+						<h2>Cursos Online, disponíveis 24 horas por dia!</h2>
+						<p>
+							<a href="#informatica" class="btn btn-warning btn-lg"><i class="fas fa-plus"></i> Sobre o Site</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Anterior</span>
+			</a>
+			<a class="carousel-control-next" href="#banner" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Próximo</span>
+			</a>
+	</div><!-- carousel -->	
+
+	<main id="conteudo"></main>
+
+	<footer class="bg-dark">
+		<div class="container">
+			<div class="row">
+				<p class="float-right">
+					<div class="col text-center wow fadeInLeft">
+						<i class="fas fa-map-marker-alt"></i>
+						<p>Av. Paraná, Maria Helena - PR</p>
+					</div>
+					<div class="col text-center wow fadeIn">
+						<i class="fas fa-mobile-alt"></i>
+						<p>(00) 00000-0000</p>
+					</div>
+					<div class="col text-center wow fadeInRight">
+						<i class="fas fa-envelope"></i>
+						<p>teste@teste.com</p>
+					</div>
+				</p>				
+			</div>
+			<hr>
+			<p class="float-left direitos">2018 - Todos os Direitos Reservados!
+				<p class="float-right">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+				</p>				
+				<p class="float-right">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				</p>				
+				<p class="float-right">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</p>
+			</p>
+		</div>
+	</footer>
+
+</body>
+</html>
